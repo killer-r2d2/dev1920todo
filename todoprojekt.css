@@ -13,3 +13,28 @@ ul {
     font-size:1.5rem;
     list-style-type: none;
 }
+
+main {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:solid #ededed;
+    margin: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    border: solid  #ededed;
+    padding: 30px;
+    
+}
+::placeholder {
+    border: solid #ededed;
+    
+}
+
