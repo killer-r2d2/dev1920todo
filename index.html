@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>todos</title>
     <link rel="stylesheet" href="todoprojekt.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:300&display=swap" rel="stylesheet">
  </head>
 <body>
     
@@ -18,12 +19,14 @@
 <!--main-->
 
 <main>
-    <ul>
-        <li><input placeholder="What needs to be done?"></li>
-        <li><input type="checkbox">Milch<input type="button"></li>
-        <li><input type="checkbox">Wasser<input type="button"></li>
-        <li><input type="checkbox">Orangensaft<input type="button"></li>
-        <li><input type="checkbox">Whatever<input type="button"></li>
+
+    <div class="li__placeholder"><input typ="text" placeholder="What needs to be done?"></div>
+
+    <ul class="ul__list">
+        <li input type="checkbox" id="A"><label for="A"></label><p>Milch</p><div class="redcross"></div></li>
+        <li input type="checkbox" id="B"><label for="B"></label><p>Wasser</p><div class="redcross"></div</li>
+        <li input type="checkbox" id="C"><label for="C"></label><p>Orangensaft</p><div class="redcross"></div</li>
+        <li input type="checkbox" id="D"><label for="D"></label><p>Whatever</p><div class="redcross"></div</li>
     </ul>
 </main>
 
