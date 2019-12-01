@@ -12,32 +12,48 @@ h1 {
     color: #af2f2f;
 }
 
-div {
-    padding: 20px;
 
-}
+main {
 
-.li__placeholder {
-    background-color: #ffffff;
-    border: solid #ededed;
-    margin-left: 40px;
     display: flex;
-    justify-content: center;
-
+    flex-direction: column;
+    align-items: center;
+    
 
 
 }
+
 
 li {
     background-color: #ffffff;
     display: flex;
     justify-content: space-around;
-    color: #4d4d4d;
+    align-items: center;
     border: solid #ededed;
+    width: 500px;
 }
 
-.redcross {
-    
+li.ul__placeholder {
 
+    background-color: #ffffff;
+    height: 60px;
+    margin: -35px;
+    border: solid #ededed;
+    display: flex;
+    justify-content: flex-start;
+ 
+}
+
+img.arrowdown {
+
+    height: 20px;
+    color: grey;
+    margin: 20px;
+}
+
+input {
+
+    border: none;
+    font-size: 16px;
 
 }
