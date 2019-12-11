@@ -13,7 +13,7 @@
 <!--header-->
 
 <header>
-<h1>todos</h1>
+<h1 class="title">todos</h1>
 </header>
 
 <!--main-->
@@ -21,55 +21,52 @@
 <main>
 
 
-    <ul>
-        <li class="ul__placeholder">
-          
-         <img class="arrowdown"src="arrowdown.png" alt="arrowdown">
+    <div class="placeholder">
+                 
+         <img class="placeholder__arrowdown" src="arrowdown.png" alt="arrowdown">
          <input type="text" placeholder="What needs to be done?">  
-
-
-        </li>
-       
-    </ul>
+    </div>
 
 
     <ul class="list">
         
         <li class="list__listitems">
-            <img class="checkbox" src="checkboxinaktiv.svg" alt="checkboxaktiv">
-            <p>Milch</p>
+            <img class="list__listitems__button" src="buttoninaktiv.svg" alt="buttoninaktiv">
+            <p class="list__listitems__product">Milch</p>
             <label for="redcross"></label>
-            <input type="checkbox" name="redcross" id="redcross">
+            <input type="button" name="redcross" id="redcross">
         </li>
 
         <li class="list__listitems">
-            <img class="checkbox" src="checkboxaktiv.svg" alt="checkboxaktiv">
-            <p>Wasser</p>
+            <img class="list__listitems__button" src="buttonaktiv.svg" alt="buttonaktiv">
+            <p class="list__listitems__product">Wasser</p>
             <label for="redcross"></label>
-            <input type="checkbox" name="redcross" id="redcross">
+            <input type="button" name="redcross" id="redcross">
         </li>
 
         <li class="list__listitems">
-            <img class="checkbox" src="checkboxaktiv.svg" alt="checkboxaktiv">
-            <p>Orangensaft</p>
+            <img class="list__listitems__button" src="buttonaktiv.svg" alt="buttonaktiv">
+            <p class="list__listitems__product">Orangensaft</p>
             <label for="redcross"></label>
-            <input type="checkbox" name="redcross" id="redcross">
+            <input type="button" name="redcross" id="redcross">
         </li>
 
         <li class="list__listitems">
-            <img class="checkbox" src="checkboxaktiv.svg" alt="checkboxaktiv">
-            <p>Whatever</p>
+            <img class="list__listitems__button" src="buttonaktiv.svg" alt="buttonaktiv">
+            <p class="list__listitems__product">Whatever</p>
             <label for="redcross"></label>
-            <input type="checkbox" name="redcross" id="redcross">
+            <input type="button" name="redcross" id="redcross">
         </li>
 
-        <li class="stackeffect">
-                
-                <p class="p__itemsleft">3 items left</p>
-               
-        </li>
- 
     </ul>
+
+    <div>
+             
+            <p class="list__listitems__itemsleft">3 items left</p>
+           
+    <div>
+
+
 </main>
 
 
