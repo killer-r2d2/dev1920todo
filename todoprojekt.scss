@@ -1,7 +1,7 @@
 /*header incl. h1*/
 
 $listitembackgroundcolor: #ffffff;
-$listborder: solid #ededed;
+$listborder: solid #ededed 1px;
 $bodycolor: #f5f5f5;
 $fontfamily: 'Heebo', sans-serif;
 $h1color: #af2f2f;
@@ -9,18 +9,16 @@ $h1color: #af2f2f;
 body {
     background-color: $bodycolor;
     font-size:16px;
-    font-family: $fontfamily;
-    border-left: 40px;
-    
+    font-family: $fontfamily;   
 }
 
-h1.title {
+.title {
     font-size: 6.25rem;
     text-align: center;
     color: $h1color;
 }
 
-/*main and list elements*/
+/*placeholder and list__listitem*/
 
 main {
     display: flex;
@@ -28,55 +26,68 @@ main {
     align-items: center;
 }
 
-ul.list {
-    margin-top: 2px;
-}
-
-li {
-    background-color:$listitembackgroundcolor;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border: $listborder;
-    width: 500px;
-    
-}
-
 div.placeholder {
-
     background-color: $listitembackgroundcolor;
     margin-left: 38px;
     width: 500px;
     height: 60px;
     display: flex;
     align-items: center;
-    border: $listborder;
-        
+    border: $listborder;   
 }
-
-input {
-    border: none;
-}
-
-img.placeholder__arrowdown {
-
+.placeholder__arrowdown {
     background-color: $listitembackgroundcolor;
     height: 10px;
     margin-right: 35px;
     margin-left: 20px;;
     display: flex;
     justify-content: flex-start;
-
- 
+}
+input {
+    border: none;
 }
 
-input#redcross {
+
+.list {
+    margin-top: 2px;
+    margin-bottom: 1px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+
+li.list__listitem {
+    display: flex;
+    justify-content: center;
+    border: $listborder;
+    background-color: $listitembackgroundcolor;
+}
+.list__product {
+    margin-left: 25px;
+}
+.list__button {
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 3px;
+}
+#redcross {
     margin-left: auto;
-    size: 50px;
-    margin-right: 10px;
+    height: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
-p.list__listitems__product {
+.itemsleft {
+    background-color: $listitembackgroundcolor;
+    margin-left: 38px;
+    margin-top: 1px;
+    width: 500px;
+    height: 30px;
+    border: $listborder;
+    font-size: 10px;
+}
 
-    margin-left: 20px;
+.itemsleft__left {
+    margin-left: 15px;
 }
