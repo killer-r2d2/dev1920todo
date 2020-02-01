@@ -9,13 +9,13 @@ body {
   text-align: center;
   color: #af2f2f; }
 
-/*placeholder and list__listitem*/
+/*main-placeholder-list*/
 main {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
-div.placeholder {
+.placeholder {
   background-color: #ffffff;
   margin-left: 38px;
   width: 500px;
