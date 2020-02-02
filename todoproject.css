@@ -44,12 +44,12 @@ input {
 
 .list__listitem {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   border: solid #ededed 1px;
   background-color: #ffffff; }
 
 .list__product {
-  margin-left: 25px; }
+  margin-right: 250px; }
 
 .list__button {
   height: 35px;
@@ -75,6 +75,7 @@ input {
 .itemsleft__left {
   margin-left: 15px; }
 
+/* checkbox */
 .list__checkbox {
   display: block;
   position: relative;
@@ -92,3 +93,8 @@ input {
   content: '\2713';
   color: green;
   margin-left: 5px; }
+
+/* button */
+.list__btn {
+  margin-right: 20px;
+  margin-top: 15px; }
