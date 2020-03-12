@@ -1,35 +1,41 @@
+
+// We import all functions from tools.js
+import * as Tools from './tools.js';
+
 // JavaScript knows now your ul with the class .list
 const taskList = document.querySelector('.list');
 // we admit an eventlistener with a 'click' event and the deleteTask function
-taskList.addEventListener('click', deleteTask);
+taskList.addEventListener('click', Tools.deleteElement);
+
+// creat an elment with data from localStorage
+const ToDoList = JSON.parse(localStorage.getItem('ToDos'));
+    for (let i = 0; i < ToDoList.length; i++) {
+    Tools.createElement(ToDoList[i].inhalt, taskList);
+    }
+
 // JavaScript knows now your div with the class placeholder and the input tag
-const newEintrag = document.querySelector('.placeholder input');
+const newEntry = document.querySelector('.placeholder input');
 // we admit an eventlistener with a 'keypress' event and the newTask function
-newEintrag.addEventListener('keypress', newTask);
-
-// create a new element
-function newTask(event) {
-    if (event.key === 'Enter') {
-        const newElement = document.createElement('li');
-        newElement.classList.add('list__listitem');
-        newElement.innerHTML = `<label class="list__checkbox">
-            <input type="checkbox">
-            <div class="list__hack"></div>
-        </label>
-        <p class="list__product">${newEintrag.value}</p>
-        <label class="list__btn">
-            <input type="button">
-            <div class="cross"></div>
-        </label>`;
-        taskList.appendChild(newElement);
-        newEintrag.value = '';
+newEntry.addEventListener('keypress', function(event){
+        if (event.key === 'Enter') {
+        Tools.createElement(newEntry.value, taskList);
+        newEntry.value = '';
+        creatArrayTask();
+        }
     }
-    console.log(newElement);
+);
+
+// we creat the creatArrayTask function
+function creatArrayTask() {
+    const arrayTask = [];
+    let listLoop = document.querySelectorAll('.list__listitem');
+    for (let i = 0; i < listLoop.length; i++) {
+        let status = 'open';
+        let inhalt = listLoop[i].lastElementChild.previousElementSibling.innerHTML;
+        let taskObject = {status:status, inhalt:inhalt};
+        arrayTask.push(taskObject);
+    }
+    const listJson = JSON.stringify(arrayTask);
+    localStorage.setItem('ToDos', listJson);
 }
 
-// delete a element
-function deleteTask(event) {
-    if (event.target.type === 'button') {
-        taskList.removeChild(event.target.parentNode.parentNode);
-    }
-}
