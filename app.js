@@ -11,12 +11,12 @@ taskList.addEventListener('click', Tools.deleteElement);
 const ToDoList = JSON.parse(localStorage.getItem('ToDos'));
     for (let i = 0; i < ToDoList.length; i++) {
     Tools.createElement(ToDoList[i].inhalt, taskList);
-    }
+    };
 
 // JavaScript knows now your div with the class placeholder and the input tag
 const newEntry = document.querySelector('.placeholder input');
-// we admit an eventlistener with a 'keypress' event and the newTask function
-newEntry.addEventListener('keypress', function(event){
+// we admit an eventlistener with a 'keypress' event and the creatElement function
+newEntry.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
         Tools.createElement(newEntry.value, taskList);
         newEntry.value = '';
@@ -26,7 +26,7 @@ newEntry.addEventListener('keypress', function(event){
 );
 
 // we creat the creatArrayTask function
-function creatArrayTask() {
+const creatArrayTask = () => {
     const arrayTask = [];
     let listLoop = document.querySelectorAll('.list__listitem');
     for (let i = 0; i < listLoop.length; i++) {
@@ -37,5 +37,5 @@ function creatArrayTask() {
     }
     const listJson = JSON.stringify(arrayTask);
     localStorage.setItem('ToDos', listJson);
-}
+};
 

@@ -1,5 +1,5 @@
 // function creatElement
-const createElement = function newTask(newEntry, taskList) {
+const createElement = (newEntry, taskList) => {
         const newElement = document.createElement('li');
         newElement.classList.add('list__listitem');
         newElement.innerHTML = `<label class="list__checkbox">
@@ -12,15 +12,17 @@ const createElement = function newTask(newEntry, taskList) {
             <div class="cross"></div>
         </label>`;
         taskList.appendChild(newElement);
-}
+};
 
-// We creat the function deleteTask
-const deleteElement = function deleteTask(event) {
-    if (event.target.type === 'button') {
-        event.target.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode);
-        creatArrayTask()
-    }
-}
+
+// We creat the function deleteElement66
+ const deleteElement = (event) => {
+  if (event.target.type === 'button') {
+  event.target.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode);
+  }
+ };
+
+
 
 // we export the functions
 export { createElement, deleteElement };
