@@ -15,14 +15,21 @@ const createElement = (newEntry, taskList) => {
 };
 
 
-// We creat the function deleteElement66
+// We creat the function deleteElement
  const deleteElement = (event) => {
-  if (event.target.type === 'button') {
+     console.log('gecklickt');
+  if (event.target.matches('input')) {
   event.target.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode);
   }
  };
 
-
+ const delegate = function (cssClass, callback) {
+    return function(event) {
+        if (event.target.matches(cssClass)) {
+            callback(event);
+        };
+    };
+}
 
 // we export the functions
-export { createElement, deleteElement };
+export { createElement, deleteElement, delegate };
