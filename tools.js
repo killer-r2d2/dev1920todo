@@ -8,7 +8,7 @@ const createElement = (newEntry, taskList) => {
         </label>
         <p class="list__product">${newEntry}</p>
         <label class="list__btn">
-            <input type="button">
+            <input class="list__btn__delete"type="button">
             <div class="cross"></div>
         </label>`;
         taskList.appendChild(newElement);
@@ -17,11 +17,10 @@ const createElement = (newEntry, taskList) => {
 
 // We creat the function deleteElement
  const deleteElement = (event) => {
-     console.log('gecklickt');
-  if (event.target.matches('input')) {
-  event.target.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode);
-  }
- };
+ if (event.target.matches('.list__btn__delete')) {
+ event.target.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode);
+ }
+};
 
  const delegate = function (cssClass, callback) {
     return function(event) {
