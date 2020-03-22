@@ -1,26 +1,29 @@
-// function creatElement
-const createElement = (newEntry, taskList) => {
+// function render
+const render = (parameter1, parameter2) => {
+    parameter2.innerHTML='';
+    for (let i = 0; i < parameter1.length; i++) {
         const newElement = document.createElement('li');
         newElement.classList.add('list__listitem');
+        newElement.id = i;
         newElement.innerHTML = `<label class="list__checkbox">
             <input type="checkbox">
             <div class="list__hack"></div>
         </label>
-        <p class="list__product">${newEntry}</p>
+        <p class="list__product">${parameter1[i].inhalt}</p>
         <label class="list__btn">
             <input class="list__btn__delete"type="button">
             <div class="cross"></div>
         </label>`;
-        taskList.appendChild(newElement);
+        parameter2.appendChild(newElement);
+    }
+    saveToLocalStorage(parameter1);
+      
 };
 
-
-// We creat the function deleteElement
- const deleteElement = (event) => {
- if (event.target.matches('.list__btn__delete')) {
- event.target.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode);
- }
-};
+function saveToLocalStorage(ToDoList) {             // ToDoList is our array
+    const stringTasklist = JSON.stringify(ToDoList);
+    localStorage.setItem('ToDos', stringTasklist);
+}
 
  const delegate = function (cssClass, callback) {
     return function(event) {
@@ -31,4 +34,4 @@ const createElement = (newEntry, taskList) => {
 }
 
 // we export the functions
-export { createElement, deleteElement, delegate };
+export { saveToLocalStorage, render, delegate };
