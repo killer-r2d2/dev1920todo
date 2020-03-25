@@ -1,4 +1,5 @@
-// function render
+// render function
+  
 const render = (parameter1, parameter2) => {
     parameter2.innerHTML='';
     for (let i = 0; i < parameter1.length; i++) {
@@ -20,12 +21,13 @@ const render = (parameter1, parameter2) => {
       
 };
 
+// saveToLocalStorage function
 function saveToLocalStorage(ToDoList) {             // ToDoList is our array
     const stringTasklist = JSON.stringify(ToDoList);
     localStorage.setItem('ToDos', stringTasklist);
 }
 
- const delegate = function (cssClass, callback) {
+const delegate = function (cssClass, callback) {
     return function(event) {
         if (event.target.matches(cssClass)) {
             callback(event);
