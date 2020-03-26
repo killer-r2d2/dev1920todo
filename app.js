@@ -42,8 +42,8 @@ function deleteElement(event) {
 //         return offen.status == 'open';
 //     })
 // }
-var todos = [];
 
+// JavaScript knows now #postButton and #getButton. And we admit click event and the function (postAufrufstarten, getAufrufStarten)
 document.querySelector('#postButton').addEventListener('click', postAufrufStarten);
 document.querySelector('#getButton').addEventListener('click', getAufrufStarten);
 
@@ -56,8 +56,8 @@ function getAufrufStarten() {
         return response.json();
     })
     .then(function(antwort) {
-        todos= antwort;
-        render();
+        ToDoList = antwort;
+        Tools.render(ToDoList, taskList);
     // mit todos kann jetzt ganz normal gearbeitet werden, es ist bereits umgewandelt    
     });
    
@@ -70,10 +70,10 @@ function postAufrufStarten() {
         headers: {
         'Content-Type': 'application/json',
         },
-        body: JSON.stringify(todos),
+        body: JSON.stringify(ToDoList),
     })
     .then(response => response.json())
     .then(data => console.log('Success:', data))
     .catch(error => console.error('Error:', error));
-    render();
+    Tools.render(ToDoList, taskList);
 };
