@@ -9,22 +9,22 @@ body {
   text-align: center;
   color: #af2f2f; }
 
-/* POST and GET button*/
+/* filter buttons */
 .btn {
   display: flex;
   justify-content: center;
   margin-bottom: 20px; }
 
-.btn__postGetBtn {
+.btn__filterBtn {
   text-align: center;
   margin: 15px;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50px;
   border: solid lightgrey 1px;
   background-color: white; }
 
-.btn__postGetBtn:hover {
+.btn__filterBtn:hover {
   background-color: lightgrey;
   cursor: pointer;
   transition: background-color ease-out 3s;
@@ -65,13 +65,13 @@ input {
 
 .list__listitem {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   border: solid #ededed 1px;
   background-color: #ffffff;
   overflow: hidden; }
 
 .list__product {
-  margin-right: 250px; }
+  margin-left: 10px; }
 
 .list__button {
   height: 35px;
@@ -117,5 +117,8 @@ input {
 
 /* button */
 .list__btn {
-  margin-right: 20px;
-  margin-top: 15px; }
+  margin-left: auto;
+  margin-top: 20px;
+  margin-right: 10px; }
+
+/* list__btn__delete */

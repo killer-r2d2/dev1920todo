@@ -42,13 +42,13 @@ input {
 
 .list__listitem {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     border: $listborder;
     background-color: $listitembackgroundcolor;
     overflow: hidden;
 }
 .list__product {
-    margin-right: 250px;
+    margin-left: 10px;
 }
 .list__button {
     height: 35px;
@@ -110,13 +110,21 @@ input {
  
 
    .list__btn {
-    margin-right: 20px;
-    margin-top: 15px;
+    // margin-right: 20px;
+    // margin-top: 15px;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 10px;
 }
 
-    
+/* list__btn__delete */ 
+
+// .list__btn__delete {
+
+// background-color: yellow;
 
 
+// }
 
 
     

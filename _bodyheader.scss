@@ -13,7 +13,7 @@ body {
     color: $h1color;
 }
 
-/* POST and GET button*/
+/* filter buttons */
 
 
 .btn {
@@ -22,18 +22,19 @@ body {
     margin-bottom: 20px;
 }
 
-.btn__postGetBtn {
+
+.btn__filterBtn {
     text-align: center;
     margin: 15px;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50px;
     border: solid lightgrey 1px;
     background-color: white
     
 }
 
-.btn__postGetBtn:hover {
+.btn__filterBtn:hover {
     background-color: lightgrey;
     cursor: pointer;
     transition: background-color ease-out 3s;
