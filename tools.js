@@ -1,5 +1,4 @@
 // render function
-  
 const render = (parameter1, parameter2) => {
     parameter2.innerHTML='';
     for (let i = 0; i < parameter1.length; i++) {
@@ -15,6 +14,9 @@ const render = (parameter1, parameter2) => {
             <input class="list__btn__delete"type="button">
             <div class="cross"></div>
         </label>`;
+        if (parameter1[i].status == 'done') {
+            newElement.firstChild.firstElementChild.checked = true;
+        }
         parameter2.appendChild(newElement);
     }
     saveToLocalStorage(parameter1);
@@ -35,5 +37,6 @@ const delegate = function (cssClass, callback) {
     };
 }
 
+
 // we export the functions
-export { saveToLocalStorage, render, delegate };
+export { saveToLocalStorage, render, delegate  };
