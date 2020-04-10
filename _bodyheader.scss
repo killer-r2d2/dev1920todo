@@ -19,24 +19,15 @@ body {
 .btn {
     display: flex;
     justify-content: center;
+    margin: 50px;
     margin-bottom: 20px;
 }
 
 
+
 .btn__filterBtn {
-    text-align: center;
-    margin: 15px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
-    border: solid lightgrey 1px;
-    background-color: white
-    
+    height: 20px;
+    width: 20px;
+    margin-left: 20px;
 }
 
-.btn__filterBtn:hover {
-    background-color: lightgrey;
-    cursor: pointer;
-    transition: background-color ease-out 3s;
-    box-shadow: 0 10px 4px -7px black;
-}

@@ -49,12 +49,15 @@ input {
 }
 .list__product {
     margin-left: 10px;
+    width: 400px;
+    overflow: hidden;
 }
 .list__button {
     height: 35px;
     margin-top: 10px;
     margin-left: 3px;
 }
+
 #redcross {
     margin-left: auto;
     height: 10px;
@@ -83,6 +86,7 @@ input {
 /* checkbox */
 
 .list__checkbox {
+
     display: block;
     position: relative;
     height: 25px;
@@ -98,12 +102,24 @@ input {
     display: none;
   }
 
-  
+  .list__checkbox + .list__hack:after {
+      content: '';
+      width: 30px;
+      height: 30px;
+  } 
+
+
+
+  .list__hack {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+  }
 
   .list__checkbox input:checked + .list__hack:after {
     content: '\2713';
     color: green;
-    margin-left: 5px;
 }
 
 /* button */

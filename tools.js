@@ -1,7 +1,20 @@
 // render function
 const render = (parameter1, parameter2) => {
     parameter2.innerHTML='';
+    const doneFilter = document.querySelector('#doneBtn');
+    const openFilter = document.querySelector('#openBtn');
+    const itemsLeft = document.querySelector('.itemsleft__left');
+    
+    let openTasks = 0;
     for (let i = 0; i < parameter1.length; i++) {
+        if (parameter1[i].status == 'open') {
+            openTasks += 1;
+        }
+        if (doneFilter.checked == true && parameter1[i].status == 'open') {
+            continue;
+        } else if (openFilter.checked == true && parameter1[i].status == 'done') {
+            continue;
+        }
         const newElement = document.createElement('li');
         newElement.classList.add('list__listitem');
         newElement.id = i;
@@ -19,6 +32,8 @@ const render = (parameter1, parameter2) => {
         }
         parameter2.appendChild(newElement);
     }
+    itemsLeft.innerText = openTasks + ' items left';
+    console.log(openTasks);
     saveToLocalStorage(parameter1);
       
 };

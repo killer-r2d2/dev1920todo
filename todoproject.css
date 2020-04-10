@@ -13,22 +13,13 @@ body {
 .btn {
   display: flex;
   justify-content: center;
+  margin: 50px;
   margin-bottom: 20px; }
 
 .btn__filterBtn {
-  text-align: center;
-  margin: 15px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
-  border: solid lightgrey 1px;
-  background-color: white; }
-
-.btn__filterBtn:hover {
-  background-color: lightgrey;
-  cursor: pointer;
-  transition: background-color ease-out 3s;
-  box-shadow: 0 10px 4px -7px black; }
+  height: 20px;
+  width: 20px;
+  margin-left: 20px; }
 
 /*main-placeholder-list*/
 main {
@@ -71,7 +62,9 @@ input {
   overflow: hidden; }
 
 .list__product {
-  margin-left: 10px; }
+  margin-left: 10px;
+  width: 400px;
+  overflow: hidden; }
 
 .list__button {
   height: 35px;
@@ -110,10 +103,20 @@ input {
 .list__checkbox input {
   display: none; }
 
+.list__checkbox + .list__hack:after {
+  content: '';
+  width: 30px;
+  height: 30px; }
+
+.list__hack {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center; }
+
 .list__checkbox input:checked + .list__hack:after {
   content: '\2713';
-  color: green;
-  margin-left: 5px; }
+  color: green; }
 
 /* button */
 .list__btn {

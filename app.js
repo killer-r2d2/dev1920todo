@@ -24,7 +24,6 @@ newEntry.addEventListener('keypress', (event) => {
 
 // We creat the function deleteElement
 function deleteElement(event) {
-    console.log('event = ' + event);
     if (event.target.matches('.list__btn__delete')) {
         ToDoList.splice(event.target.parentNode.parentNode.id, 1);
         Tools.render(ToDoList, taskList);
@@ -34,15 +33,15 @@ function deleteElement(event) {
 
 // We create the function statusChecked
 function statusChecked(event) {
-    if (event.target.matches('.list__checkbox')) {
-        console.log(ToDoList);
-        if (ToDoList[event.target.parentNode.id].status == 'open') {
-            ToDoList[event.target.parentNode.id].status = 'done';
+    console.log(event.target.parentNode.parentNode);
+    if (event.target.matches('.list__hack')) {
+        if (ToDoList[event.target.parentNode.parentNode.id].status == 'open') {
+            ToDoList[event.target.parentNode.parentNode.id].status = 'done';
         } else {
-            ToDoList[event.target.parentNode.id].status = 'open';
+            ToDoList[event.target.parentNode.parentNode.id].status = 'open';
         }
         Tools.render(ToDoList, taskList);
-        postAufrufStarten();
+        // postAufrufStarten();
     }
 }
 
@@ -67,9 +66,25 @@ function getStoredData() {
     }
 }
 
-// JavaScript knows now #postButton and #getButton. And we admit click event and the function (postAufrufstarten, getAufrufStarten)
-document.querySelector('#postButton').addEventListener('click', postAufrufStarten);
-document.querySelector('#getButton').addEventListener('click', getAufrufStarten);
+// JavaScript knows now #allBtn/#doneBtn/#openBtn. And we admit click event and the function (postAufrufstarten, getAufrufStarten)
+document.querySelector('#allBtn').addEventListener('click', render);
+document.querySelector('#doneBtn').addEventListener('click', render);
+document.querySelector('#openBtn').addEventListener('click', render);
+
+
+// function editingStatus(event) {
+//     var filterdToDoList = ToDoList.filter(function (task) {
+//         return task.status == 'done';
+//     })
+//     console.log(filterdToDoList);
+//     Tools.render(filterdToDoList, taskList);
+//     // postAufrufStarten()
+// }
+
+
+function render() {
+    Tools.render(ToDoList, taskList);
+}
 
 // we create a fetch (GET) function
 function getAufrufStarten() {
