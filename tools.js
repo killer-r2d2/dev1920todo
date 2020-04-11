@@ -43,7 +43,6 @@ function saveToLocalStorage(ToDoList) {             // ToDoList is our array
     const stringTasklist = JSON.stringify(ToDoList);
     localStorage.setItem('ToDos', stringTasklist);
 }
-
 const delegate = function (cssClass, callback) {
     return function(event) {
         if (event.target.matches(cssClass)) {

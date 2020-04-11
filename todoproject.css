@@ -112,16 +112,16 @@ input {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+  height: 30px; }
 
 .list__checkbox input:checked + .list__hack:after {
   content: '\2713';
-  color: green; }
+  color: green;
+  font-size: 30px; }
 
 /* button */
 .list__btn {
   margin-left: auto;
   margin-top: 20px;
   margin-right: 10px; }
-
-/* list__btn__delete */
