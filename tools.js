@@ -1,5 +1,5 @@
 // render function
-const render = (parameter1, parameter2) => {
+const render = (parameter1, parameter2) => { //parameter1 = array (ToDoList), parameter2 = taskList
     parameter2.innerHTML='';
     const doneFilter = document.querySelector('#doneBtn');
     const openFilter = document.querySelector('#openBtn');
@@ -10,7 +10,7 @@ const render = (parameter1, parameter2) => {
         if (parameter1[i].status == 'open') {
             openTasks += 1;
         }
-        if (doneFilter.checked == true && parameter1[i].status == 'open') {
+        if (doneFilter.checked == true && parameter1[i].status == 'open') { // && is a boolean operator, which means "and"
             continue;
         } else if (openFilter.checked == true && parameter1[i].status == 'done') {
             continue;
@@ -35,7 +35,6 @@ const render = (parameter1, parameter2) => {
     itemsLeft.innerText = openTasks + ' items left';
     console.log(openTasks);
     saveToLocalStorage(parameter1);
-      
 };
 
 // saveToLocalStorage function
