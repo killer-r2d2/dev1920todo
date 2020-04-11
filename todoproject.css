@@ -120,8 +120,18 @@ input {
   color: green;
   font-size: 30px; }
 
-/* button */
+/* delete btn */
 .list__btn {
   margin-left: auto;
   margin-top: 20px;
   margin-right: 10px; }
+
+.list__btn__delete {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  cursor: pointer; }
+
+.list__btn__delete:hover {
+  background-image: url("cancel.svg");
+  transform: 5s; }
