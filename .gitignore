@@ -2,3 +2,6 @@
 .DS_Store
 /dist
 backend/node_modules/
+node_modules
+src/css/
+*-bundle.js

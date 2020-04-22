@@ -12,9 +12,9 @@ taskList.addEventListener('click', statusChecked);
 const newEntry = document.querySelector('.placeholder input');
 // we admit an eventlistener with a 'keypress' event and the render function
 newEntry.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter' && newEntry.value != '') {
+        if (event.key === 'Enter' && newEntry.value != '') { // and not empty
             // Tools.render(newEntry.value, taskList);
-            ToDoList.push({status:'open', inhalt: newEntry.value});
+            ToDoList.push({status:'open', inhalt: newEntry.value}); // {} so it becomes an object!!!
             newEntry.value = '';
             Tools.render(ToDoList, taskList);
             postAufrufStarten();

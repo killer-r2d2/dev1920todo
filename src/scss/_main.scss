@@ -1,6 +1,7 @@
 
 /*main-placeholder-list*/
 
+
 main {
     display: flex;
     flex-direction: column;
@@ -136,9 +137,11 @@ input {
     cursor: pointer;
 }
 
+
+
 .list__btn__delete:hover {
-    background-image: url("cancel.svg");
     transform: 5s;
+    background-image: url("../images/cross.svg");
 }
 
 
